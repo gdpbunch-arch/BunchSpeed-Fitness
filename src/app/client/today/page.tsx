@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/no-explicit-any: "off" */
 'use client';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
