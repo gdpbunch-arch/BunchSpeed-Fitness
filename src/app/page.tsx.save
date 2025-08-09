@@ -1,0 +1,57 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function Home() {
+  return (
+    <main style={{ padding: 24, display: 'grid', gap: 16, maxWidth: 900 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <Image src="/brand/logo.png" alt="Bunchspeed Fitness" width={48} height={48} />
+        <h1 style={{ margin: 0 }}>Bunchspeed Fitness</h1>
+      </div>
+
+      <p>Quick link to your client portal page:</p>
+      <p>
+        <Link href="/client/today" style={{ padding: 12, border: '1px solid #eee', borderRadius: 8, textDecoration: 'none' }}>
+          ➜ Open Client ▸ Today
+        </Link>
+      </p>
+    </main>
+  );
+}
+
+nano src/app/layout.tsx
+
+import type { Metadata } from 'next';
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'Bunchspeed Fitness',
+  description: 'Bunchspeed Fitness — client portal for coaching: workouts, meals, logging.',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
+
+
+cd ~/coach-app
+pwd
+import Link from 'next/link';
+
+export default function Home() {
+  return (
+    <main style={{ padding: 24, display: 'grid', gap: 16 }}>
+      <h1 style={{ margin: 0 }}>Bunch Coach App</h1>
+      <p>Quick link to your client portal page:</p>
+      <p>
+        <Link href="/client/today" style={{ padding: 12, border: '1px solid #eee', borderRadius: 8, textDecoration: 'none' }}>
+          ➜ Open Client ▸ Today
+        </Link>
+      </p>
+    </main>
+  );
+}
